@@ -2,7 +2,7 @@
 How Kubernetes uses DNS for service discovery
 
 ```
-[user@phatbox epick8s_class (⎈ |Epick8s:default)]$ kubectl run -i -t busybox --image=busybox --restart=Never -- sh
+[user@phatbox epick8s_class (⎈ |Epick8s:default)]$ kubectl run -i -t busybox --image=radial/busyboxplus:curl --restart=Never -- sh
 If you don't see a command prompt, try pressing enter.
 / # nslookup helloworld-service.default.svc.cluster.local
 Server:		10.0.0.10
