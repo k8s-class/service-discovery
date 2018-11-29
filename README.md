@@ -32,4 +32,8 @@ Address:	10.0.0.10:53
 
 Non-authoritative answer:
 224.36.0.10.in-addr.arpa	name = helloworld-service.default.svc.cluster.local
+
+curl http://helloworld-service:31001
+Hello World![ root@busybox:/ ]$ 
+
 ```
