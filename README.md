@@ -37,3 +37,23 @@ curl http://helloworld-service:31001
 Hello World![ root@busybox:/ ]$ 
 
 ```
+```nslookup kubernetes.default.svc.cluster.local
+Server:    10.233.0.3
+Address 1: 10.233.0.3 kube-dns.kube-system.svc.cluster.local
+
+Name:      kubernetes.default.svc.cluster.local
+Address 1: 10.233.0.1 kubernetes.default.svc.cluster.local
+[ root@busybox:/ ]$ nslookup helloworld-v1.default.svc.cluster.local
+Server:    10.233.0.3
+Address 1: 10.233.0.3 kube-dns.kube-system.svc.cluster.local
+
+Name:      helloworld-v1.default.svc.cluster.local
+Address 1: 10.233.44.157 helloworld-v1.default.svc.cluster.local
+[ root@busybox:/ ]$ curl http://10.233.44.157
+<html>
+This is my actual code
+</html>[ root@busybox:/ ]$ curl http://helloworld-v1.default.svc.cluster.local
+<html>
+This is my actual code
+</html>[ root@busybox:/ ]$ 
+```
